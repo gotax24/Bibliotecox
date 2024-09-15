@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pagina sobre una biblioteca ficticia" />
+    <meta name="author" content="Ing Ernesto Bracho R" />
+    <meta name="keywords" content="biblioteca,javascript,html,css,poo" />
+    <title>Bibliotecox</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="icon"
+      href="img/library-building-svgrepo-com(negro).svg"
+      type="image/svg+xml"
+    />
+  </head>
+  <body>
+    <header>
+      <img src="img/library-building-svgrepo-com.svg" height="50px" alt="" />
+      <h1>Bibliotecox</h1>
+      <a href="index.html">Cerra sesion</a>
+      <nav>
+        <a href="home.html">Pagina principal</a>
+        <a href="prestar.html">Prestar o devolver libro</a>
+      </nav>
+    </header>
+    <main>
+      <div id="divForm">
+        <form id="form-libro">
+          <label
+            >Titulo:
+            <input type="text" id="titulo" />
+          </label>
+          <label
+            >Autor:
+            <input type="text" id="autor" />
+          </label>
+          <label
+            >ISBN:
+            <input type="number" min="1" max="13" id="isbn" />
+          </label>
+          <button id="agregarLibro">Agregar el libro</button>
+          <button id="editarLibro">Editar el libro</button>
+          <button id="eliminarLibro">Eliminar un libro</button>
+        </form>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Titulo</th>
+            <th>Autor</th>
+            <th>ISBN</th>
+          </tr>
+        </thead>
+        <tbody id="table"></tbody>
+      </table>
+    </main>
+    <footer>Hecho por Ing Ernesto Bracho R</footer>
+    <script type="module" src="js/administrarLibro.js"></script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pagina sobre una biblioteca ficticia" />
+    <meta name="author" content="Ing Ernesto Bracho R" />
+    <meta name="keywords" content="biblioteca,javascript,html,css,poo" />
+    <title>Bibliotecox</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="icon"
+      href="img/library-building-svgrepo-com(negro).svg"
+      type="image/svg+xml"
+    />
+  </head>
+  <body>
+    <header class="contenedor-header">
+      <img src="img/library-building-svgrepo-com.svg" class="logo" alt="" />
+      <h1 class="titulo">Bienvenido a Bibliotecox</h1>
+    </header>
+    <main>
+      <form id="form-login">
+        <input
+          type="email"
+          id="email-i"
+          placeholder="email@ejemplo.com"
+          autocomplete="email"
+        />
+        <input
+          type="password"
+          id="password-i"
+          placeholder="Contraseña"
+          autocomplete="current-password"
+        />
+        <button id="button-ingresar">Ingresar</button>
+      </form>
+      <form>
+        <input
+          type="text"
+          id="nombre"
+          placeholder="Nombre"
+          autocomplete="name"
+        />
+        <input
+          type="email"
+          id="email-r"
+          placeholder="email@ejemplo.com"
+          autocomplete="email"
+        />
+        <input
+          type="password"
+          id="password-r"
+          placeholder="Contraseña"
+          autocomplete="new-password"
+        />
+        <button id="button-registrar">Registrar</button>
+        <p id="resultado-user">
+          La contraseña debe tener al menos 8 carecteres, una letra mayusculas,
+          un numero y un caracter especial
+        </p>
+      </form>
+    </main>
+    <footer>Hecho por Ing Ernesto Bracho</footer>
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>

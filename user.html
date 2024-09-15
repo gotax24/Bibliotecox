@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pagina sobre una biblioteca ficticia" />
+    <meta name="author" content="Ing Ernesto Bracho R" />
+    <meta name="keywords" content="biblioteca,javascript,html,css,poo" />
+    <title>Bibliotecox</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="icon"
+      href="img/library-building-svgrepo-com(negro).svg"
+      type="image/svg+xml"
+    />
+  </head>
+  <body>
+    <header>
+      <img src="img/library-building-svgrepo-com.svg" height="50px" alt="" />
+      <h1>Bibliotecox</h1>
+      <a href="index.html">Cerra sesion</a>
+      <nav>
+        <a href="add.html">Agregar Libro</a>
+        <a href="prestar.html">Prestar o devolver libro</a>
+      </nav>
+    </header>
+    <main>
+      <div>
+        <div>
+          <img src="img/user-circle-svgrepo-com (1).svg" alt="" />
+          <h2>Bienvenido <span id="usuario"></span></h2>
+        </div>
+        <div>
+          <h3>Que deseas hacer?</h3>
+          <form id="contentInputs">
+            <button id="nombreNuevo">Cambiar nombre</button>
+            <button id="emailNuevo">Cambiar email</button>
+            <button id="passwordNuevo">Cambiar contraseña</button>
+            <button id="eliminarUsuario">Eliminar ususario</button>
+          </form>
+        </div>
+        <p id="resultado"></p>
+      </div>
+    </main>
+    <footer>Hecho por Ing Ernesto Bracho</footer>
+    <script type="module" src="js/administrarUsuario.js"></script>
+  </body>
+</html>

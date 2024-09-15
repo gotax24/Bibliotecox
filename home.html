@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pagina sobre una biblioteca ficticia" />
+    <meta name="author" content="Ing Ernesto Bracho R" />
+    <meta name="keywords" content="biblioteca,javascript,html,css,poo" />
+    <title>Bibliotecox</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/library-building-svgrepo-com(negro).svg" type= />
+  </head>
+  <body>
+    <header>
+      <img src="img/library-building-svgrepo-com.svg" height="50px" alt="" />
+      <h1>Bibliotecox</h1>
+      <a href="index.html">Cerra sesion</a>
+      <nav>
+        <a href="add.html">Agregar Libro</a>
+        <a href="prestar.html">Prestar o devolver libro</a>
+      </nav>
+      <div>
+        <img src="img/user-circle-svgrepo-com.svg" alt="" />
+        <a href="usuario.html">Hola <span id="usuario"></span></a>
+      </div>
+    </header>
+    <main>
+      <section>
+        <h2>Nuesta historia</h2>
+        <img src="img/christian-garcia-94vH_-E4CK4-unsplash.jpg" alt="" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+          vehicula ac magna et aliquet. Vestibulum a nunc euismod, vehicula
+          magna sit amet, pretium nibh. Nulla vitae cursus nunc. Nulla neque
+          elit, hendrerit ac tincidunt sed, dictum non enim. Curabitur mattis
+          iaculis fringilla. Fusce pellentesque suscipit purus. Ut vehicula
+          ullamcorper arcu. Etiam volutpat ac dui in ornare. Nullam in diam sed
+          felis porta bibendum a eu eros. Pellentesque habitant morbi tristique
+          senectus et netus et malesuada fames ac turpis egestas. Praesent
+          eleifend dapibus euismod. Donec non arcu sed enim porta imperdiet.
+          Mauris molestie eros eu ex dignissim suscipit. Pellentesque ac odio
+          suscipit, scelerisque sem sit amet, aliquam massa. Suspendisse eu
+          lacus sed mi luctus sagittis. Suspendisse quis eros nec purus lacinia
+          iaculis. Duis molestie libero quis velit lobortis, quis commodo augue
+          aliquam. Nam dictum enim massa, tempus luctus turpis volutpat quis.
+          Suspendisse potenti. Etiam sit amet faucibus mi. Praesent non faucibus
+          enim.
+        </p>
+        <footer>
+          Foto de
+          <a
+            href="https://unsplash.com/es/@christian_garcia?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+            >Christian Garcia</a
+          >
+          en
+          <a
+            href="https://unsplash.com/es/fotos/mesas-y-sillas-de-madera-marron-dentro-del-edificio-94vH_-E4CK4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+            >Unsplash</a
+          >
+        </footer>
+      </section>
+      <section>
+        <h2>Nuestros fundadores</h2>
+        <img src="img/museums-victoria-mQJCWimuLFg-unsplash.jpg" alt="" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+          varius ipsum nec nibh scelerisque ultricies. Interdum et malesuada
+          fames ac ante ipsum primis in faucibus. Integer metus turpis,
+          consequat non turpis vitae, scelerisque tristique erat. Aenean lacinia
+          sit amet leo sit amet pretium. Etiam nec laoreet est. Nullam convallis
+          nunc eu maximus ornare. Ut vitae interdum lacus, nec tempus dolor.
+          Aliquam erat volutpat. Sed et fermentum orci. Sed vel laoreet felis.
+          Pellentesque ullamcorper eros a mattis placerat. Sed in porta diam.
+          Nullam mollis erat non aliquet lobortis. Aenean condimentum ultrices
+          cursus. Orci varius natoque penatibus et magnis dis parturient montes,
+          nascetur ridiculus mus. Praesent metus sapien, volutpat a dui vel,
+          vehicula pretium magna. Pellentesque finibus lacus magna, sed tempor
+          turpis eleifend ut. Fusce ac lacus sodales, ullamcorper felis at,
+          sodales sem. Aenean at dui semper enim bibendum tincidunt vitae sed
+          mi. Nulla hendrerit eros quam, eu pretium nulla mattis sed. Fusce ut
+          lorem id sem condimentum vehicula. Nulla maximus tincidunt nisl ut
+          consequat. Donec pretium, tortor quis convallis accumsan, metus felis
+          tempor augue, vitae viverra risus nibh vitae lectus. Curabitur in
+          lacus at metus varius dapibus. Sed mattis pulvinar ligula non
+          elementum. Nulla facilisi. Praesent id odio id ligula ornare rutrum.
+          Quisque tempor convallis erat non luctus.
+        </p>
+      </section>
+      <footer>
+        Foto de
+        <a
+          href="https://unsplash.com/es/@museumsvictoria?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+          >Museums Victoria</a
+        >
+        en
+        <a
+          href="https://unsplash.com/es/fotos/hombre-en-traje-negro-sentado-en-las-escaleras-mQJCWimuLFg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+          >Unsplash</a
+        >
+      </footer>
+    </main>
+    <footer>Hecho por: Ing Ernesto Bracho R.</footer>
+    <script>
+      let usuario = JSON.parse(localStorage.getItem("usuarioActivo"));
+
+      const span = document.getElementById("usuario");
+
+      span.innerHTML = usuario.nombre;
+    </script>
+  </body>
+</html>
