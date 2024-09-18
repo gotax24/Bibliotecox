@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Pagina sobre una biblioteca ficticia" />
+    <meta name="description" content="Página sobre una biblioteca ficticia" />
     <meta name="author" content="Ing Ernesto Bracho R" />
     <meta name="keywords" content="biblioteca,javascript,html,css,poo" />
     <title>Bibliotecox</title>
@@ -13,61 +13,115 @@
       href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <link
       rel="icon"
       href="img/library-building-svgrepo-com(negro).svg"
       type="image/svg+xml"
     />
+    <link rel="stylesheet" type="text/css" href="slide navbar style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header class="contenedor-header">
-      <img src="img/library-building-svgrepo-com.svg" class="logo" alt="" />
-      <h1 class="titulo">Bienvenido a Bibliotecox</h1>
+    <header>
+      <img
+        class="img-logo"
+        src="img/library-building-svgrepo-com.svg"
+        alt="Logo de la pagina"
+      />
+      <h1>Bienvenido a Bibliotecox</h1>
     </header>
     <main>
-      <form id="form-login">
-        <input
-          type="email"
-          id="email-i"
-          placeholder="email@ejemplo.com"
-          autocomplete="email"
-        />
-        <input
-          type="password"
-          id="password-i"
-          placeholder="Contraseña"
-          autocomplete="current-password"
-        />
-        <button id="button-ingresar">Ingresar</button>
-      </form>
-      <form>
-        <input
-          type="text"
-          id="nombre"
-          placeholder="Nombre"
-          autocomplete="name"
-        />
-        <input
-          type="email"
-          id="email-r"
-          placeholder="email@ejemplo.com"
-          autocomplete="email"
-        />
-        <input
-          type="password"
-          id="password-r"
-          placeholder="Contraseña"
-          autocomplete="new-password"
-        />
-        <button id="button-registrar">Registrar</button>
-        <p id="resultado-user">
-          La contraseña debe tener al menos 8 carecteres, una letra mayusculas,
-          un numero y un caracter especial
-        </p>
-      </form>
+      <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true" />
+        <div class="signup">
+          <form>
+            <label for="chk" aria-hidden="true">Registro</label>
+            <input
+              type="text"
+              name="txt"
+              placeholder="Nombre"
+              required 
+              id="nombre"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              required 
+              id="email-r"
+            />
+            <input
+              type="password"
+              name="pswd"
+              placeholder="Password"
+              required 
+              id="password-r"
+            />
+            <button id="button-registrar">Registrar</button>
+          </form>
+        </div>
+
+        <div class="login">
+          <form>
+            <label for="chk" aria-hidden="true">Ingresar</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              required 
+              id="email-i"
+            />
+            <input
+              type="password"
+              name="pswd"
+              placeholder="Password"
+              required 
+              id="password-i"
+            />
+            <button id="button-ingresar">Ingresar</button>
+          </form>
+        </div>
+      </div>
     </main>
-    <footer>Hecho por Ing Ernesto Bracho</footer>
+
+    <footer id="footer" class="credits">
+      <address class="social-network-icons">
+        <a
+          href="https://github.com/gotax24?tab=repositories"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link-networks"
+        >
+          <img src="img/github.svg" class="img-footer" alt="logo de github" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/ernesto-bracho/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link-networks"
+        >
+          <img
+            src="img/likendlin.svg"
+            class="img-footer"
+            alt="logo de likendlin"
+          />
+        </a>
+        <a
+          href="mailto:dev.ejbr@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link-networks"
+        >
+          <img src="img/email.svg" class="img-footer" alt="logo de email" />
+        </a>
+      </address>
+      <div class="copyright">Creator: Ing. Ernesto Bracho 2024 &#169;</div>
+    </footer>
+
     <script type="module" src="./js/index.js"></script>
   </body>
 </html>
