@@ -31,7 +31,6 @@ a:hover{
 
 .titulo-principal {
   font-family: var(--font1);
-  display: inline-block;
   color: var(--color4);
   font-size: 32px;
 }
@@ -52,7 +51,6 @@ a:hover{
 .img-logo {
   width: 50px;
   height: 50px;
-  display: inline-block;
 }
 
 .menu{
@@ -63,11 +61,25 @@ a:hover{
 }
 
 .user{
-  position: relative;
-  left: 600px;
+  float: right; /* Mueve el elemento hacia la derecha */
+  width: 200px;
   color: var(--color4);
 }
-    
+
+.parent{
+  display: flex; /* Coloca los elementos en línea (imagen y texto) */
+  align-items: center; /* Alinea verticalmente los elementos */
+  gap: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.texto{
+  font-size: 28px;
+  font-family: var(--font1);
+  color: #000;
+  width: 800px;
+  text-shadow: 1px 1px 2px rgb(255, 255, 255);
+}
+
 .credits {
   display: grid;
   place-items: center; 
