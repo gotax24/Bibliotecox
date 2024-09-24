@@ -25,7 +25,7 @@ a {
   text-decoration: none;
 }
 
-a:hover{
+a:hover {
   color: var(--color3);
 }
 
@@ -35,14 +35,14 @@ a:hover{
   font-size: 32px;
 }
 
-.titulo{
+.titulo {
   font-family: var(--font1);
   font-size: 30px;
   font-style: italic;
   color: var(--color3);
 }
 
-.img-home{
+.img-home {
   width: 320px;
   height: 400px;
   border-radius: 12px;
@@ -53,26 +53,26 @@ a:hover{
   height: 50px;
 }
 
-.menu{
+.menu {
   color: var(--color4);
   font-size: 20px;
   font-family: var(--font1);
   font-weight: 800;
 }
 
-.user{
+.user {
   float: right; /* Mueve el elemento hacia la derecha */
   width: 200px;
   color: var(--color4);
 }
 
-.parent{
+.parent {
   display: flex; /* Coloca los elementos en línea (imagen y texto) */
   align-items: center; /* Alinea verticalmente los elementos */
   gap: 20px; /* Espacio entre la imagen y el texto */
 }
 
-.texto{
+.texto {
   font-size: 28px;
   font-family: var(--font1);
   color: #000;
@@ -80,11 +80,95 @@ a:hover{
   text-shadow: 1px 1px 2px rgb(255, 255, 255);
 }
 
+/* Estilos generales de add */
+.form-container,
+.table-add {
+  padding: 20px;
+  border-radius: 10px;
+  flex-grow: 1; 
+}
+
+/* Contenedor principal que agrupa el formulario y la tabla */
+.main-container {
+  display: flex; /* Coloca los elementos uno al lado del otro */
+  justify-content: space-between; /* Asegura que haya espacio entre ambos */
+  align-items: flex-start; /* Alinea verticalmente los elementos al inicio */
+  gap: 20px; /* Espacio entre el formulario y la tabla */
+  margin: 20px; /* Margen alrededor del contenedor */
+}
+
+/* Estilos para el formulario */
+.form-container {
+  width: 45%; /* Ajusta el ancho del formulario */
+}
+
+.form {
+  display: flex;
+  flex-direction: column; /* Alinea los elementos del formulario verticalmente */
+}
+
+.label-input {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-family: var(--font1);
+  color: var(--color4);
+}
+
+.input {
+  width: 50%;
+  padding: 8px;
+  border-radius: 8px;
+  border-style: none; 
+}
+
+.input-separacion{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.button-form {
+  width: 65%;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: var(--color2);
+  color: var(--color4);
+  border-style: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button-form:hover {
+  background-color: var(--color1);
+}
+
+/* Estilos para la tabla */
+.table-add {
+  width: 70%; /* Ajusta el ancho de la tabla */
+  border-collapse: collapse;
+  font-family: var(--font1);
+}
+
+.table-add th,
+.table-add td {
+  border: 1px solid var(--color3);
+  padding: 8px;
+  text-align: left;
+}
+
+.table-add th {
+  background-color: var(--color1);
+  color: var(--color4);
+}
+
+.table-add tbody td {
+  background-color: var(--color4);
+}
+
 .credits {
   display: grid;
-  place-items: center; 
+  place-items: center;
   width: 100%;
-  min-height: 250px;
+  min-height: 305px;
 }
 
 .social-network-icons {
@@ -108,6 +192,22 @@ a:hover{
 }
 
 .img-footer:hover {
-  transform: scale(1.3); 
+  transform: scale(1.3);
   transition: transform 0.3s ease-in-out, fill 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .parent {
+    flex-direction: column; /* Apila imagen y texto verticalmente en pantallas pequeñas */
+    text-align: center; /* Centra el texto */
+  }
+
+  .texto {
+    width: 100%; /* Asegura que el texto ocupe el ancho completo */
+  }
+
+  .img-home {
+    width: 100%; /* Ajusta la imagen para pantallas pequeñas */
+    height: auto; /* Mantén la proporción */
+  }
 }

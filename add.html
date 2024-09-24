@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Pagina sobre una biblioteca ficticia" />
+    <meta name="description" content="Página sobre una biblioteca ficticia" />
     <meta name="author" content="Ing Ernesto Bracho R" />
     <meta name="keywords" content="biblioteca,javascript,html,css,poo" />
     <title>Bibliotecox</title>
@@ -25,47 +25,102 @@
       <img
         class="img-logo"
         src="img/library-building-svgrepo-com.svg"
-        alt="Logo de la pagina"
+        alt="Logo de la biblioteca"
       />
       <h1 class="titulo-principal">Bienvenido a Bibliotecox</h1>
       <nav class="menu">
-        <a href="home.html">Pagina principal | </a>
+        <a href="home.html">Página principal | </a>
         <a href="prestar.html">Prestar o devolver libro | </a>
         <a href="index.html" onclick="cerrarSesion()">Cerrar sesión</a>
       </nav>
     </header>
+
     <main>
-      <div id="divForm">
-        <form id="form-libro">
-          <label
-            >Titulo:
-            <input type="text" id="titulo" />
-          </label>
-          <label
-            >Autor:
-            <input type="text" id="autor" />
-          </label>
-          <label
-            >ISBN:
-            <input type="number" min="1" max="13" id="isbn" />
-          </label>
-          <button id="agregarLibro">Agregar el libro</button>
-          <button id="editarLibro">Editar el libro</button>
-          <button id="eliminarLibro">Eliminar un libro</button>
-        </form>
+      <div class="main-container">
+        <div class="form-container" id="divForm">
+          <form class="form" id="form-libro">
+            <label class="label-input"
+              >Título:
+              <input class="input" type="text" id="titulo" required />
+            </label>
+            <label class="label-input"
+              >Autor:
+              <input class="input" type="text" id="autor" required />
+            </label>
+            <label class="label-input"
+              >ISBN:
+              <input
+                class="input"
+                type="text"
+                id="isbn"
+                maxlength="13"
+                pattern="\d{13}"
+                required
+              />
+            </label>
+            <button class="button-form" id="agregarLibro" type="submit">
+              Agregar libro
+            </button>
+            <button class="button-form" id="editarLibro" type="button">
+              Editar libro
+            </button>
+            <button class="button-form" id="eliminarLibro" type="button">
+              Eliminar libro
+            </button>
+          </form>
+        </div>
+
+        <table class="table-add">
+          <thead>
+            <tr>
+              <th>Título</th>
+              <th>Autor</th>
+              <th>ISBN</th>
+            </tr>
+          </thead>
+          <tbody id="table">
+            <tr>
+              <td colspan="3">No hay libros disponibles.</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <table>
-        <thead>
-          <tr>
-            <th>Titulo</th>
-            <th>Autor</th>
-            <th>ISBN</th>
-          </tr>
-        </thead>
-        <tbody id="table"></tbody>
-      </table>
     </main>
-    <footer>Hecho por Ing Ernesto Bracho R</footer>
+
+    <footer class="credits">
+      <address class="social-network-icons">
+        <a
+          href="https://github.com/gotax24?tab=repositories"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link-networks"
+        >
+          <img src="img/github.svg" class="img-footer" alt="logo de github" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/ernesto-bracho/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link-networks"
+        >
+          <img
+            src="img/likendlin.svg"
+            class="img-footer"
+            alt="logo de likendlin"
+          />
+        </a>
+        <a
+          href="mailto:dev.ejbr@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link-networks"
+        >
+          <img src="img/email.svg" class="img-footer" alt="logo de email" />
+        </a>
+      </address>
+      <div class="copyright">Creator: Ing. Ernesto Bracho 2024 &#169;</div>
+    </footer>
+
     <script type="module" src="js/administrarLibro.js"></script>
   </body>
 </html>
