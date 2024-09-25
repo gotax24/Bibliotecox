@@ -81,15 +81,15 @@ a:hover {
 }
 
 /* Estilos generales de add */
-.form-container,
+.form-container-add,
 .table-add {
   padding: 20px;
   border-radius: 10px;
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
 /* Contenedor principal que agrupa el formulario y la tabla */
-.main-container {
+.main-container-add {
   display: flex; /* Coloca los elementos uno al lado del otro */
   justify-content: space-between; /* Asegura que haya espacio entre ambos */
   align-items: flex-start; /* Alinea verticalmente los elementos al inicio */
@@ -98,7 +98,7 @@ a:hover {
 }
 
 /* Estilos para el formulario */
-.form-container {
+.form-container-add {
   width: 45%; /* Ajusta el ancho del formulario */
 }
 
@@ -107,7 +107,7 @@ a:hover {
   flex-direction: column; /* Alinea los elementos del formulario verticalmente */
 }
 
-.label-input {
+.label-input-add {
   margin-bottom: 10px;
   font-size: 24px;
   font-family: var(--font1);
@@ -118,10 +118,10 @@ a:hover {
   width: 50%;
   padding: 8px;
   border-radius: 8px;
-  border-style: none; 
+  border-style: none;
 }
 
-.input-separacion{
+.input-separacion {
   margin-top: 15px;
   margin-bottom: 15px;
 }
@@ -162,6 +162,102 @@ a:hover {
 
 .table-add tbody td {
   background-color: var(--color4);
+}
+
+/* Para centrar el contenedor principal del formulario */
+/* Contenedor general */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.input-tabla-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Cada columna para input, botón y tabla */
+.column {
+  width: 45%;
+}
+
+/* Input y botón en línea */
+.input-boton {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Ajuste del input */
+.input-boton input {
+  width: 70%;
+  padding: 8px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Botón */
+.input-boton button {
+  padding: 8px 12px;
+  background-color: #815b5b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.input-boton button:hover {
+  background-color: #594545;
+}
+
+/* Tablas */
+.tabla-libros {
+  font-family: var(--font1);
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.tabla-libros th,
+.tabla-libros td {
+  border: 1px solid var(--color3);
+  padding: 10px;
+  text-align: left;
+  background-color: var(--color4);
+}
+
+.tabla-libros th {
+  background-color: var(--color2);
+  color: white;
+}
+
+.tabla-libros tbody tr:nth-child(even) {
+  background-color: var(--color4);
+}
+
+.label-input {
+  font-family: var(--font1);
+  color: var(--color4);
+  font-size: 18px;
+}
+
+.presentacion{
+  color: var(--color4);
+  font-family: var(--font1);
+  font-size: 28px;
+}
+
+.pregunta{
+  color: var(--color4);
+  font-size: 22px;
+  font-family: var(--font1);
 }
 
 .credits {

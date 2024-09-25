@@ -4,9 +4,10 @@ import biblioteca from "./biblioteca.js";
 //Hago una instancia global
 const miBiblioteca = new biblioteca();
 
-const span = document.getElementById("usuario");
-
-span.innerText = miBiblioteca.usuarioActivo.nombre;
+let usuario = JSON.parse(localStorage.getItem("usuarioActivo")) || {
+  nombre: "Invitado",
+};
+document.getElementById("usuario").innerHTML = usuario.nombre;
 
 //Una funcion que dibuja la tabla en el html
 const dibujarTabla = () => {
@@ -99,3 +100,8 @@ document.getElementById("devolver").addEventListener("click", () => {
     alert("El libro no lo tienes prestado");
   }
 });
+
+function cerrarSesion() {
+  localStorage.removeItem("usuarioActivo");
+  window.location.href = "index.html";
+}

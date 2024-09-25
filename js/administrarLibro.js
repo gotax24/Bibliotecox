@@ -33,8 +33,8 @@ const creacionInput = (id, placeholder, type) => {
   input.id = id;
   input.placeholder = placeholder;
   input.type = type;
-  input.classList.add('input')
-  input.classList.add('input-separacion')
+  input.classList.add("input");
+  input.classList.add("input-separacion");
 
   return input;
 };
@@ -45,7 +45,7 @@ const creacionButton = (text, id) => {
   let button = document.getElementById(id) || document.createElement("button");
   button.textContent = text;
   button.id = id;
-  button.classList.add('button-form')
+  button.classList.add("button-form");
 
   return button;
 };

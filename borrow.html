@@ -25,65 +25,65 @@
       <img
         class="img-logo"
         src="img/library-building-svgrepo-com.svg"
-        alt="Logo de la biblioteca"
+        alt="Logo de la pagina"
       />
       <h1 class="titulo-principal">Bienvenido a Bibliotecox</h1>
       <nav class="menu">
-        <a href="home.html">Página principal | </a>
-        <a href="borrow.html">Prestar o devolver libro | </a>
+        <a href="add.html">Agregar Libro | </a>
+        <a href="home.html">Pagina principal | </a>
         <a href="index.html" onclick="cerrarSesion()">Cerrar sesión</a>
       </nav>
     </header>
-
     <main>
-      <div class="main-container-add">
-        <div class="form-container-add" id="divForm">
-          <form class="form" id="form-libro">
-            <label class="label-input-add"
-              >Título:
-              <input class="input" type="text" id="titulo" required />
-            </label>
-            <label class="label-input-add"
-              >Autor:
-              <input class="input" type="text" id="autor" required />
-            </label>
-            <label class="label-input-add"
-              >ISBN:
-              <input
-                class="input"
-                type="text"
-                id="isbn"
-                maxlength="13"
-                pattern="\d{13}"
-                required
-              />
-            </label>
-            <button class="button-form" id="agregarLibro" type="submit">
-              Agregar libro
-            </button>
-            <button class="button-form" id="editarLibro" type="button">
-              Editar libro
-            </button>
-            <button class="button-form" id="eliminarLibro" type="button">
-              Eliminar libro
-            </button>
-          </form>
-        </div>
+      <div class="form-container">
+        <div class="form-container">
+          <h2 class="presentacion">Hola <span id="usuario"></span></h2>
+          <h3 class="pregunta">¿Qué desea hacer?</h3>
 
-        <table class="table-add">
-          <thead>
-            <tr>
-              <th>Título</th>
-              <th>Autor</th>
-              <th>ISBN</th>
-            </tr>
-          </thead>
-          <tbody id="table">
-            <tr>
-              <td colspan="3">No hay libros disponibles.</td>
-            </tr>
-          </tbody>
-        </table>
+          <div class="input-tabla-container">
+            <!-- Primera columna con input, botón y tabla -->
+            <div class="column">
+              <label for="isbnPrestar" class="label-input">Código ISBN para prestar:</label>
+              <div class="input-boton">
+                <input type="text" maxlength="13" id="isbnPrestar" required />
+                <button id="prestar">Prestar Libro</button>
+              </div>
+
+              <h4>Libros disponibles:</h4>
+              <table class="tabla-libros">
+                <thead>
+                  <tr>
+                    <th>Título</th>
+                    <th>Autor</th>
+                    <th>ISBN</th>
+                  </tr>
+                </thead>
+                <tbody id="table"></tbody>
+              </table>
+            </div>
+
+            <!-- Segunda columna con input, botón y tabla -->
+            <div class="column">
+              <label for="isbnDevolver" class="label-input">Código ISBN para devolver:</label>
+              <div class="input-boton">
+                <input type="text" maxlength="13" id="isbnDevolver" required />
+                <button id="devolver">Devolver Libro</button>
+              </div>
+
+              <h4>Libros prestados:</h4>
+              <table class="tabla-libros">
+                <thead>
+                  <tr>
+                    <th>Título</th>
+                    <th>Autor</th>
+                    <th>ISBN</th>
+                  </tr>
+                </thead>
+                <tbody id="tablePrestados"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
 
@@ -121,6 +121,6 @@
       <div class="copyright">Creator: Ing. Ernesto Bracho 2024 &#169;</div>
     </footer>
 
-    <script type="module" src="js/administrarLibro.js"></script>
+    <script type="module" src="js/prestarDevolver.js"></script>
   </body>
 </html>
