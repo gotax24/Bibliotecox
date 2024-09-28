@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Pagina sobre una biblioteca ficticia" />
+    <meta name="description" content="Página sobre una biblioteca ficticia" />
     <meta name="author" content="Ing Ernesto Bracho R" />
     <meta name="keywords" content="biblioteca,javascript,html,css,poo" />
     <title>Bibliotecox</title>
@@ -22,33 +22,75 @@
   </head>
   <body>
     <header>
-      <img src="img/library-building-svgrepo-com.svg" height="50px" alt="" />
-      <h1>Bibliotecox</h1>
-      <a href="index.html">Cerra sesion</a>
-      <nav>
-        <a href="add.html">Agregar Libro</a>
-        <a href="borrow.html">Prestar o devolver libro</a>
+      <img
+        class="img-logo"
+        src="img/library-building-svgrepo-com.svg"
+        alt="Logo de la pagina"
+      />
+      <h1 class="titulo-principal">Bienvenido a Bibliotecox</h1>
+      <nav class="menu">
+        <a href="home.html">Pagina principal |  </a>
+        <a href="add.html">Agregar Libro | </a>
+        <a href="borrow.html">Prestar o devolver libro | </a>
+        <a href="index.html" onclick="cerrarSesion()">Cerrar sesión</a>
       </nav>
     </header>
-    <main>
-      <div>
+    
+    <main class="main-user">
+      <div class="user-info">
         <div>
-          <img src="img/user-circle-svgrepo-com (1).svg" alt="" />
-          <h2>Bienvenido <span id="usuario"></span></h2>
+          <img class="logo-user" src="img/user-circle-svgrepo-com (1).svg" alt="Icono de usuario" />
+          <h2 class="titulo-user">Bienvenido <span id="usuario"></span></h2>
         </div>
+
         <div>
-          <h3>Que deseas hacer?</h3>
+          <h3 class="preunta-user">¿Qué deseas hacer?</h3>
           <form id="contentInputs">
-            <button id="nombreNuevo">Cambiar nombre</button>
-            <button id="emailNuevo">Cambiar email</button>
-            <button id="passwordNuevo">Cambiar contraseña</button>
-            <button id="eliminarUsuario">Eliminar ususario</button>
+            <button id="nombreNuevo" type="button">Cambiar nombre</button>
+            <button id="emailNuevo" type="button">Cambiar email</button>
+            <button id="passwordNuevo" type="button">Cambiar contraseña</button>
+            <button id="eliminarUsuario" type="button">Eliminar usuario</button>
           </form>
         </div>
+        
         <p id="resultado"></p>
       </div>
     </main>
-    <footer>Hecho por Ing Ernesto Bracho</footer>
+
+    <footer id="footer" class="credits">
+      <address class="social-network-icons">
+        <a
+          href="https://github.com/gotax24?tab=repositories"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link-networks"
+        >
+          <img src="img/github.svg" class="img-footer" alt="logo de github" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/ernesto-bracho/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link-networks"
+        >
+          <img
+            src="img/likendlin.svg"
+            class="img-footer"
+            alt="logo de likendlin"
+          />
+        </a>
+        <a
+          href="mailto:dev.ejbr@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link-networks"
+        >
+          <img src="img/email.svg" class="img-footer" alt="logo de email" />
+        </a>
+      </address>
+      <div class="copyright">Creator: Ing. Ernesto Bracho 2024 &#169;</div>
+    </footer>
+
     <script type="module" src="js/administrarUsuario.js"></script>
   </body>
 </html>

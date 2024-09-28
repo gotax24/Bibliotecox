@@ -206,7 +206,7 @@ a:hover {
 /* Botón */
 .input-boton button {
   padding: 8px 12px;
-  background-color: #815b5b;
+  background-color: var(--color2);
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -214,7 +214,7 @@ a:hover {
 }
 
 .input-boton button:hover {
-  background-color: #594545;
+  background-color: var(--color1);
 }
 
 /* Tablas */
@@ -248,16 +248,88 @@ a:hover {
   font-size: 18px;
 }
 
-.presentacion{
+.presentacion {
   color: var(--color4);
   font-family: var(--font1);
   font-size: 28px;
 }
 
-.pregunta{
+.pregunta {
   color: var(--color4);
   font-size: 22px;
   font-family: var(--font1);
+}
+
+.main-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* User Info Container */
+.user-info {
+  padding: 30px;
+
+  text-align: center;
+  width: 400px;
+}
+
+/* Logo and Title */
+.logo-user {
+  width: 200px; /* Adjust the size of the logo */
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.titulo-user {
+  font-size: 24px;
+  color: var(--color4);
+  margin-bottom: 20px;
+}
+
+.preunta-user {
+  font-size: 20px;
+  color: var(--color4);
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+#contentInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Spacing between buttons */
+}
+
+#contentInputs button {
+  padding: 8px 12px;
+  background-color: var(--color2);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#contentInputs button:hover {
+  background-color: var(--color1);
+}
+
+#contentInputs input {
+  border-radius: 8px;
+  border-style: none;
+  background-color: var(--color4);
+  color: var(--color1);
+  height: 25px;
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+#contentInputs input::placeholder {
+  font-family: var(--font1);
+  font-style: italic;
+  text-align: center;
+  color: #000;
+  font-size: 16px;
 }
 
 .credits {
@@ -305,5 +377,13 @@ a:hover {
   .img-home {
     width: 100%; /* Ajusta la imagen para pantallas pequeñas */
     height: auto; /* Mantén la proporción */
+  }
+
+  .main-user {
+    padding: 20px;
+  }
+
+  .user-info {
+    width: 100%;
   }
 }

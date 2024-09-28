@@ -3,9 +3,10 @@ import biblioteca from "./biblioteca.js";
 const miBilioteca = new biblioteca();
 
 const actualizarNombre = () => {
-  let span = document.getElementById("usuario");
-
-  const usuario = JSON.parse(localStorage.getItem("usuarioActivo"));
+  let usuario = JSON.parse(localStorage.getItem("usuarioActivo"));
+  document.getElementById("usuario").innerText = usuario
+    ? usuario.nombre
+    : "Invitado";
 
   return (span.innerText = usuario.nombre);
 };
