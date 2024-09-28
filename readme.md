@@ -1,37 +1,91 @@
 # Bibliotecox
 
-**Bibliotecox** es una página web ficticia que permite gestionar una biblioteca. Los usuarios pueden agregar libros, prestar o devolver libros y actualizar su información personal (nombre, correo electrónico, contraseña) mediante una interfaz fácil de usar. Este proyecto utiliza HTML, CSS y JavaScript para su funcionamiento.
+**Bibliotecox** es una aplicación web ficticia diseñada para gestionar bibliotecas. Permite a los usuarios agregar libros, gestionar préstamos y devoluciones, y actualizar su información personal de forma sencilla y eficiente. El proyecto está construido con HTML, CSS y JavaScript, utilizando principios modernos de diseño y desarrollo web.
 
 ## Características
 
-- **Agregar Libros**: Permite agregar libros con detalles como título, autor y código ISBN.
-- **Prestar y Devolver Libros**: Los usuarios pueden gestionar el préstamo y devolución de libros usando el código ISBN.
-- **Gestión de Usuarios**: Los usuarios pueden actualizar su nombre, correo electrónico y contraseña, o eliminar su cuenta.
-- **Interfaz de Usuario Centrada**: La página está diseñada con un enfoque minimalista, con elementos centrados y un diseño responsivo para adaptarse a diferentes tamaños de pantalla.
-- **Diseño Responsivo**: La interfaz está optimizada para dispositivos móviles y pantallas de escritorio.
-- **Compatibilidad con Navegadores**: La página es compatible con los navegadores modernos.
+- **Agregar Libros**: Los usuarios pueden agregar libros proporcionando el título, autor y código ISBN.
+- **Gestión de Préstamos y Devoluciones**: Funcionalidad para prestar o devolver libros mediante el código ISBN.
+- **Gestión de Usuarios**: Los usuarios pueden:
+  - Cambiar su nombre.
+  - Actualizar su correo electrónico.
+  - Modificar su contraseña.
+  - Eliminar su cuenta.
+- **Interfaz Minimalista y Centrada**: La UI está diseñada para ser intuitiva y está centrada tanto en dispositivos móviles como en pantallas grandes.
+- **Diseño Responsivo**: Optimizada para adaptarse a distintos dispositivos, incluyendo móviles y tablets.
+- **Compatibilidad con Navegadores Modernos**: Funciona perfectamente en navegadores populares como Chrome, Firefox, Safari y Edge.
 
 ## Tecnologías Utilizadas
 
-- **HTML5**: Estructura de la página web.
-- **CSS3**: Estilos y diseño responsivo.
-- **JavaScript (ES6+)**: Manejo de la lógica del frontend.
-- **Google Fonts**: Tipografía personalizada.
-- **SVG Icons**: Iconos en formato SVG para una mejor calidad visual.
+- **HTML5**: Para la estructura y contenido de las páginas.
+- **CSS3**: Para el estilo, diseño responsivo y personalización visual.
+- **JavaScript (ES6+)**: Para manejar la lógica del frontend.
+- **Google Fonts**: Tipografía personalizada para mejorar la presentación visual.
+- **SVG Icons**: Íconos vectoriales de alta calidad que se adaptan a distintas resoluciones.
 
 ## Estructura del Proyecto
 
 ```bash
 bibliotecox/
 │
-├── img/                    # Carpeta de imágenes y logos
-│   └── *.svg                # Archivos SVG usados en la interfaz
-├── css/
-│   └── style.css            # Archivo de estilos CSS principal
-├── js/
-│   └── administrarUsuario.js # Lógica de JavaScript para la gestión de usuarios
-├── index.html               # Página principal
-├── add.html                 # Página para agregar libros
-├── borrow.html             # Página para prestar y devolver libros
-├── user.html               # Pagina para administrar el usuario
-└── README.md                # Documentación del proyecto
+├── img/                       # Carpeta que contiene imágenes y logos en formato SVG y JPG
+│   └── *.svg                  # Archivos SVG usados en la interfaz de usuario
+│   └── *.jpg                  # Imágenes adicionales usadas en la página principal
+│
+├── css/                       # Estilos CSS del proyecto
+│   └── index.css              # Estilos CSS para el sistema de login
+│   └── style.css              # Estilos CSS principal para la UI
+│
+├── js/                        # Archivos de JavaScript que controlan la lógica
+│   └── administrarUsuario.js  # Lógica para la gestión de usuarios
+│   └── administrarLibro.js    # Funcionalidades para agregar, eliminar y editar libros
+│   └── Biblioteca.js          # Lógica principal de la biblioteca
+│   └── index.js               # Lógica para el manejo del login de usuarios
+│   └── libro.js               # Definición del objeto libro
+│   └── prestarDevolver.js     # Lógica para gestionar los préstamos y devoluciones
+│   └── usuario.js             # Definición del objeto usuario
+│
+├── index.html                 # Página principal de la aplicación
+├── add.html                   # Página para agregar libros a la biblioteca
+├── borrow.html                # Página para prestar y devolver libros
+├── user.html                  # Página para la administración del perfil de usuario
+└── README.md                  # Documentación del proyecto
+```
+
+## Instrucciones para la Instalación
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/bibliotecox.git
+   ```
+2. Abre el archivo `index.html` en tu navegador.
+
+## Contribuciones
+
+Si deseas contribuir a este proyecto:
+
+1. Haz un fork del repositorio.
+2. Crea una nueva rama:
+   ```bash
+   git checkout -b feature-nueva-funcionalidad
+   ```
+3. Haz tus cambios y realiza un commit:
+   ```bash
+   git commit -m "Agrega nueva funcionalidad"
+   ```
+4. Sube los cambios:
+   ```bash
+   git push origin feature-nueva-funcionalidad
+   ```
+5. Abre un Pull Request.
+
+## Licencia
+
+Este proyecto es de código abierto y está disponible bajo la licencia MIT.
+
+## Contacto
+
+- **Autor**: Ing. Ernesto Bracho
+- **Correo**: [dev.ejbr@gmail.com](mailto:dev.ejbr@gmail.com)
+- **GitHub**: [Ernesto Bracho](https://github.com/gotax24)
+- **LinkedIn**: [Ernesto Bracho](https://www.linkedin.com/in/ernesto-bracho/)
