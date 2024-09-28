@@ -127,7 +127,7 @@ export default class biblioteca {
     const tieneMayusculas = /[A-Z]/.test(password);
     const tieneMinusculas = /[a-z]/.test(password);
     const tieneNumeros = /\d/.test(password);
-    const tieneEspeciales = /[!@#$%^&*(),?":{}|<>]/.test(password);
+    const tieneEspeciales = /[!@#$%^&*(),/?":{}|<>]/.test(password);
 
     // Verificar si cumple con todos los parámetros
     if (password.length < cantidadMin) {
