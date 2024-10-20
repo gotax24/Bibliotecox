@@ -14,7 +14,7 @@ document.getElementById("button-registrar").addEventListener("click", (e) => {
   let password = document.getElementById("password-r").value;
 
   //Obtengo la etiqueta del html
-  const p = document.getElementById("resultado-user");
+  const p = document.getElementById("resultadoUser");
 
   //Verifico si los input estan vacios
   if (nombre === "" || /\d/.test(nombre)) {
