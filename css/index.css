@@ -136,7 +136,7 @@ button:hover {
   display: grid;
   place-items: center;
   width: 100%;
-  min-height: 150px;
+  min-height: 20vh
 }
 
 .social-network-icons {
