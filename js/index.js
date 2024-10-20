@@ -45,6 +45,7 @@ document.getElementById("button-registrar").addEventListener("click", (e) => {
     nombre.value = "";
     email.value = "";
     password.value = "";
+    alert("El registro fue exitoso");
   }
 });
 

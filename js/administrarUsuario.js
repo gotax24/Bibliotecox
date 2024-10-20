@@ -191,7 +191,7 @@ document.getElementById("eliminarUsuario").addEventListener("click", (e) => {
   //Elimino el usuario
   if (miBilioteca.eliminarUsuario() === true) {
     //Redirigo al usuario al login
-    window.location.href = "login.html";
+    window.location.href = "index.html";
   } else {
     alert("No se pudo eliminar");
   }
